@@ -3,7 +3,7 @@
 * Isolated contatiner from the system
 * To run an image:
     * docker run imagename
-    * docker run -it imagename ### used to open the image in interative mode
+    * docker run -it imagename --> used to open the image in interative mode
 * Whatever we do inside a docker image is isolated from the host system
 * When we run "docker run" we are just creating a container using the docker image so whatever we make changes or run inside the container doesnt make any changes to the original image and also the changes that we make additionally inside the docker image doesn't save to the image. Docker containers are stateless.
 * We can change the entrypoint by using the tag --entrypoint
@@ -14,3 +14,10 @@
 * This is an example for volume mapping
     * docker run -it --entrypoint=bash -v $(pwd)/test:/app/test python:3.13.11 --> this will keep the test folder in the local repo inside the docker
 * We can create a virtual environment inside the Docker to have an isolated python environment and exclude any conflicts with global
+
+### Creating our own Docker
+* docker build -t name:tag
+* To run the docker we can use:
+    * docker run -it --entrypoint=bash name:tag
+* To run the docker and delete it automatically we can use:
+    * docker run -it --entrypoint=bash --rm name:tag
