@@ -13,4 +13,4 @@
 * docker rm `docker ps -aq` will remove all the containers
 * This is an example for volume mapping
     * docker run -it --entrypoint=bash -v $(pwd)/test:/app/test python:3.13.11 --> this will keep the test folder in the local repo inside the docker
- 
+* We can create a virtual environment inside the Docker to have an isolated python environment and exclude any conflicts with global
