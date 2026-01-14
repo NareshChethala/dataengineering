@@ -29,3 +29,6 @@ docker run -it --rm \
 > -v ny_taxi_postgres_data:/var/lib/postgresql \
 > -p 5432:5432 \
 > postgres:18
+
+* To connect to Postgres:
+    uv run pgcli -h localhost -p 5432 -u root -d ny_taxi
